@@ -131,8 +131,6 @@ proctype elevator(int i) {
                 printf("There are %d passengers\n", npeople);
             }
 
-            int requests[ELEVATOR_CAP];
-
             int cnt = 0;
 
             do
