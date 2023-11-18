@@ -1,7 +1,3 @@
-// contrains:
-// Every request from a passenger from the floor buttons at every floor must be eventually completed
-// The time to move between 2 consecutive floors is one unit of time
-
 #define CHANNEL_CAP 128
 #define ELEVATOR_CAP 7
 #define NELEVATOR 2
@@ -56,7 +52,6 @@ inline moving(src, dest) {
 }
 
 proctype dispatcher() {
-    mtype dir;
     int floor;
     int eleno;
     mtype elevator_state[NELEVATOR];
