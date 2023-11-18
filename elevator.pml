@@ -1,4 +1,4 @@
-#define CHANNEL_CAP 128
+#define CHANNEL_CAP 1024
 #define ELEVATOR_CAP 7
 #define NELEVATOR 2
 #define NFLOOR 4
@@ -42,7 +42,7 @@ inline abs(a) {
 inline busy_wait() {
     int time = 0;
     select(time: 0 .. MAX_INTERVAL);
-    sleep(10 * time *  TIME_UNIT);
+    sleep(time *  TIME_UNIT);
 }
 
 inline moving(src, dest) {
