@@ -75,7 +75,11 @@ proctype dispatcher() {
             i = 0;
             do 
                 :: i < NELEVATOR -> if
-                                        :: elevator_state[i] == IDLE -> elevator_state[i] = RUNNING; elevatorch[i] ! floor; break
+                                        :: elevator_state[i] == IDLE -> { 
+                                            elevator_state[i] = RUNNING; 
+                                            elevatorch[i] ! floor; 
+                                            break
+                                        }
                                         :: else -> i++
                                     fi
                 :: else -> {
